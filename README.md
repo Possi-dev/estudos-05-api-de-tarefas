@@ -2,6 +2,11 @@
 
 Meu quinto projeto: uma API REST simples com Node.js e Express.
 
+## 🔗 Demo ao vivo
+
+**Front-end completo (Projeto 6):** https://projeto-final-tarefas.onrender.com  
+*(Deploy automático via Render — pode demorar 30s na primeira vez que acordar)*
+
 ## Endpoints
 
 | Método | Rota | Descrição |
@@ -12,34 +17,34 @@ Meu quinto projeto: uma API REST simples com Node.js e Express.
 | PUT | `/tarefas/:id` | Atualiza uma tarefa |
 | DELETE | `/tarefas/:id` | Remove uma tarefa |
 
-## Como usar
+## Como rodar localmente
 
 ```bash
+cd 05-api-de-tarefas
 npm install
 npm start
+# API rodando em http://localhost:3000
 ```
 
-A API estará disponível em `http://localhost:3000`.
+## Testes rápidos (PowerShell)
 
-### Exemplos
-
-```bash
-# Criar tarefa
-curl -X POST http://localhost:3000/tarefas -H "Content-Type: application/json" -d "{\"task\":\"Estudar Node.js\"}"
+```powershell
+# Criar
+Invoke-RestMethod -Uri "http://localhost:3000/tarefas" -Method Post -Body '{"texto":"Estudar Node"}' -ContentType "application/json"
 
 # Listar
-curl http://localhost:3000/tarefas
+Invoke-RestMethod -Uri "http://localhost:3000/tarefas"
 
 # Atualizar
-curl -X PUT http://localhost:3000/tarefas/1 -H "Content-Type: application/json" -d "{\"completed\":true}"
+Invoke-RestMethod -Uri "http://localhost:3000/tarefas/1" -Method Put -Body '{"concluida":true}' -ContentType "application/json"
 
 # Deletar
-curl -X DELETE http://localhost:3000/tarefas/1
+Invoke-RestMethod -Uri "http://localhost:3000/tarefas/1" -Method Delete
 ```
 
 ## O que aprendi aqui
 
-- Criar um servidor Node.js com Express
+- Criar servidor Node.js com Express
 - Definir rotas HTTP (GET, POST, PUT, DELETE)
 - Status codes (200, 201, 204, 400, 404)
 - Middleware (express.json)
