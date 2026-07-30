@@ -63,7 +63,7 @@ app.delete('/tarefas/:id', (req, res) => {
 });
 
 if (require.main === module) {
-    app.listen(PORT, () => {
+    app.listen(PORT, '0.0.0.0', () => {
         console.log(`API rodando em http://localhost:${PORT}`);
     });
 }
