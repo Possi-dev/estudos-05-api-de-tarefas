@@ -4,8 +4,8 @@ Meu quinto projeto: uma API REST simples com Node.js e Express.
 
 ## 🔗 Demo ao vivo
 
-**Front-end completo (Projeto 6):** https://projeto-final-tarefas.onrender.com  
-*(Deploy automático via Render — pode demorar 30s na primeira vez que acordar)*
+**Railway (produção):** https://api-de-tarefas-production.up.railway.app  
+**GitHub Pages (estático):** https://possi-dev.github.io/estudos-05-api-de-tarefas/
 
 ## Endpoints
 
