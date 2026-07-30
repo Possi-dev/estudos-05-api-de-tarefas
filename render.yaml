@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: api-de-tarefas
+    runtime: node
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /tarefas
+    envVars:
+      - key: NODE_VERSION
+        value: 20
+    plan: free

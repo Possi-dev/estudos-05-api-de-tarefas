@@ -1,0 +1,19 @@
+name: Deploy API to Render
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to Render
+        uses: rdpikitis/render-deploy-action@v1
+        with:
+          render-token: ${{ secrets.RENDER_API_TOKEN }}
+          service-id: ${{ secrets.RENDER_SERVICE_ID }}
